@@ -1,0 +1,9 @@
+Set 1 - basic processes/fork
+Set 2 - orphaned/zombie processes, exec-functios family
+Set 3 - signal handling
+Set 4 - pipelines
+Set 5 - POSIX semaphores
+Set 6 - POSIX shared memory
+Set 7 - POSIX message queue
+Set 8 - pthreads
+Set 9 - Bakery algorithm
