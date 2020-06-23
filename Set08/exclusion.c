@@ -49,10 +49,10 @@ void *thread(void *number){
 
 int main(int argc, char* argv[]){
     if( system("clear") != 0 ) perror("clear");
-    pthread_t tablica_watkow[N];
+    pthread_t thread_array[N];
 
     for (long i=0; i < N; ++i){
-        if ( (errno = pthread_create(&tablica_watkow[i], NULL, thread, (void *) (i+1) ) ) ) { 
+        if ( (errno = pthread_create(&thread_array[i], NULL, thread, (void *) (i+1) ) ) ) { 
             perror("Erro creating thread: "); 
             exit(EXIT_FAILURE); 
         }
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]){
 
 
     for (long i=0; i < N; ++i){
-        if ( (errno = pthread_join(tablica_watkow[i], NULL)) ) { 
+        if ( (errno = pthread_join(thread_array[i], NULL)) ) { 
             perror("Joining failed: "); 
             exit(EXIT_FAILURE); 
         }
